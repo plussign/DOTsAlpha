@@ -1,0 +1,64 @@
+# Unity generated directories
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Bb]uild/
+/[Bb]uilds/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+/[Ee]xported[Oo]bj/
+
+# IDE generated files
+/.vs/
+/.vscode/
+/.idea/
+/.gradle/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# Local tools and credentials
+/.codex/
+/.agents/
+/.aws/
+.env
+.env.*
+!.env.example
+*.keystore
+*.jks
+*.pfx
+*.p12
+
+# OS and temporary files
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.tmp
+sysinfo.txt
+crashlytics-build.properties
+~UnityDirMonSyncFile~*
+
+# Generated player builds
+*.apk
+*.aab
+*.app
+
+# Generated Addressables data
+/Assets/AddressableAssetsData/*/*.bin*
+/Assets/StreamingAssets/aa/
+/Assets/StreamingAssets/aa.meta
