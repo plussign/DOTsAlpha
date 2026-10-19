@@ -48,39 +48,18 @@ public partial struct CubeMoveSystem : ISystem
             movement.ColorTransitionElapsed = math.min(
                 movement.ColorTransitionElapsed + DeltaTime * movement.ColorChangeSpeed,
                 movement.ColorTransitionDuration);
+
+            //movement.Rng = random;
+
             float colorProgress = movement.ColorTransitionElapsed / movement.ColorTransitionDuration;
             // Ease in and out so changing targets also feels smooth.
             baseColor.Value = math.lerp(movement.ColorStart, movement.ColorTarget,
                 math.smoothstep(0f, 1f, colorProgress));
 
-            /*float3 position = transform.Position + movement.Velocity * DeltaTime;
-            float extent = movement.HalfExtent;
-
-            // Bounce off the six sides of the invisible simulation volume.
-            if (math.abs(position.x) > extent)
-            {
-                position.x = math.clamp(position.x, -extent, extent);
-                movement.Velocity.x = -movement.Velocity.x;
-            }
-            if (math.abs(position.y) > extent)
-            {
-                position.y = math.clamp(position.y, -extent, extent);
-                movement.Velocity.y = -movement.Velocity.y;
-            }
-            if (math.abs(position.z) > extent)
-            {
-                position.z = math.clamp(position.z, -extent, extent);
-                movement.Velocity.z = -movement.Velocity.z;
-            }*/
-
-            //transform.Position = position;
-            //float3 axis = movement.RotationAxis.value.xyz;
-            //movement.RotationAxis.value.w += DeltaTime % 2f - 1f;
             
             transform.Rotation = math.mul(
                 transform.Rotation, 
                 quaternion.AxisAngle(movement.RotationAxis, movement.RotationSpeed * DeltaTime));
-            movement.Rng = random;
         }
     }
 }
